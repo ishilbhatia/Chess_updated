@@ -278,6 +278,8 @@ class pawn(base):
                         return False
         if not piece_exists and (not (self.rect.x == x)):
             return False
+        if piece_exists and self.rect.y-y==2*square_size:
+            return False
         return True
 
     def rules(self, x, y, pieces_list):
